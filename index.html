@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <script src="https://kit.fontawesome.com/5aa08744e2.js" crossorigin="anonymous"></script>
+
+  <style>
+  body{
+    margin:0;
+    font-family: Arial;
+    background-color: #FAFAFA;
+  }
+  .insta-head{
+    display: grid;
+    grid-template-columns: minmax(100px, 200px) minmax(100px, 200px) minmax(100px, 200px);
+    grid-template-rows: 76px;
+    justify-content: space-around;
+    align-content: center;
+    border-bottom: 1px solid #dbdbdb;
+    background-color: white;
+  }
+
+  .logo-insta{
+    justify-self: center;
+    align-self: center;
+  }
+  .logo-insta img{
+    height: 39px;
+  }
+  .insta-search{
+    height: 15px;
+    width: 200px;
+    display: inline-block;
+    background-color: #fafafa;
+    text-align: center;
+    padding: 5px;
+    border: solid 1px #dbdbdb;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .insta-search span{
+    color: #999;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 300px;
+  }
+  .insta-user{
+    justify-self: center;
+    align-self: center;
+  }
+  .insta-user i{
+    color: #262626;
+    font-size: 24px;
+  }
+  .items:not(:first-child){
+    margin-left: 30px;
+  }
+  .post-list{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 293px));
+    justify-content: center;
+    grid-gap: 28px;
+    margin-top: 50px;
+  }
+  .post{
+    cursor: pointer;
+    position: relative;
+    display: block;
+    align-self: center;
+  }
+  .post-image{
+    margin: 0;
+  }
+  .post-image img{
+    width: 100%;
+    vertical-align: top;
+    object-fit: contain;
+  }
+  .post-overlay{
+    background: rgba(0,0,0, .4);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: none;
+    align-items: center;
+    color: white;
+    justify-content: center;
+  }
+
+  .post:hover .post-overlay{
+    display: flex;
+  }
+
+  .post-likes, 
+  .post-comments {
+    width: 80px;
+    margin: 5px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block; 
+  }
+
+  @media screen and (max-width: 768px){
+    .post-list {
+      grid-gap: 3px;
+    }
+  }
+  @media screen and (max-width: 537px){
+    .insta-search {
+      display: none;
+    }
+    .insta-head{
+      grid-template-columns: minmax(100px, 200px) minmax(100px, 200px);
+      justify-content: space-between;
+    }
+  }
+  </style>
+</head>
+<body>
+  <header class="insta-head">
+    <figure class="logo-insta">
+      <img src="img/logo-insta.jpg" alt="">
+    </figure>
+    <div class="insta-search">
+      <div>
+        <span><i class="fas fa-search"></i></span>
+        <span>Buscar</span>
+      </div>
+    </div>
+    <div class="insta-user">
+      <div>
+        <a href="" class="items"><i class="far fa-compass"></i></a>
+        <a href="" class="items"><i class="far fa-heart"></i></a>
+        <a href="" class="items"><i class="far fa-user"></i></a>
+      </div>
+    </div>
+  </header>
+  <section class="post-list">
+    <a href="" class="post">
+      <figure class="post-image">
+        <img src="img/perro1.jpg" alt="">
+      </figure>
+      <div class="post-overlay">
+        <p>
+          <span class="post-likes"><i class="fas fa-heart"></i>250</span>
+          <span class="post-comments"><i class="fas fa-comment"></i>30</span>
+        </p>
+      </div>
+    </a>
+    <a href="" class="post">
+      <figure class="post-image">
+        <img src="img/perro2.jpg" alt="">
+      </figure>
+      <div class="post-overlay">
+        <p>
+          <span class="post-likes"><i class="fas fa-heart"></i>130</span>
+          <span class="post-comments"><i class="fas fa-comment"></i>30</span>
+        </p>
+      </div>
+    </a>
+    <a href="" class="post">
+      <figure class="post-image">
+        <img src="img/perro3.jpg" alt="">
+      </figure>
+      <div class="post-overlay">
+        <p>
+          <span class="post-likes"><i class="fas fa-heart"></i>200</span>
+          <span class="post-comments"><i class="fas fa-comment"></i>56</span>
+        </p>
+      </div>
+    </a>
+    <a href="" class="post">
+      <figure class="post-image">
+        <img src="img/perro4.jpg" alt="">
+      </figure>
+      <div class="post-overlay">
+        <p>
+          <span class="post-likes"><i class="fas fa-heart"></i>201</span>
+          <span class="post-comments"><i class="fas fa-comment"></i>20</span>
+        </p>
+      </div>
+    </a>
+    <a href="" class="post">
+      <figure class="post-image">
+        <img src="img/perro5.jpg" alt="">
+      </figure>
+      <div class="post-overlay">
+        <p>
+          <span class="post-likes"><i class="fas fa-heart"></i>76</span>
+          <span class="post-comments"><i class="fas fa-comment"></i>87</span>
+        </p>
+      </div>
+    </a>
+    <a href="" class="post">
+      <figure class="post-image">
+        <img src="img/perro6.jpg" alt="">
+      </figure>
+      <div class="post-overlay">
+        <p>
+          <span class="post-likes"><i class="fas fa-heart"></i>190</span>
+          <span class="post-comments"><i class="fas fa-comment"></i>74</span>
+        </p>
+      </div>
+    </a>
+    <a href="" class="post">
+      <figure class="post-image">
+        <img src="img/perro7.jpg" alt="">
+      </figure>
+      <div class="post-overlay">
+        <p>
+          <span class="post-likes"><i class="fas fa-heart"></i>67</span>
+          <span class="post-comments"><i class="fas fa-comment"></i>23</span>
+        </p>
+      </div>
+    </a>
+    <a href="" class="post">
+      <figure class="post-image">
+        <img src="img/perro8.jpg" alt="">
+      </figure>
+      <div class="post-overlay">
+        <p>
+          <span class="post-likes"><i class="fas fa-heart"></i>190</span>
+          <span class="post-comments"><i class="fas fa-comment"></i>40</span>
+        </p>
+      </div>
+    </a>
+    <a href="" class="post">
+      <figure class="post-image">
+        <img src="img/perro9.jpg" alt="">
+      </figure>
+      <div class="post-overlay">
+        <p>
+          <span class="post-likes"><i class="fas fa-heart"></i>150</span>
+          <span class="post-comments"><i class="fas fa-comment"></i>10</span>
+        </p>
+      </div>
+    </a>
+  </section>
+
+  </div>
+</body>
+</html>
